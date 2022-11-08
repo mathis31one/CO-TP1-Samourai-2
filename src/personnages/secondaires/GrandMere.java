@@ -6,6 +6,7 @@ import java.util.Random;
 public class GrandMere extends Humain {
 	int nbConnaissances;
 	private Humain [] memoire; 
+	
 	public GrandMere(String nom, int argent) {
 		super(nom, argent, "tisane");
 		this.nbConnaissances = 0;
@@ -24,14 +25,30 @@ public class GrandMere extends Humain {
 	
 	private String humainHasard() {
 		Random r = new Random();
-		int i = r.nextInt(3);
+		int i = r.nextInt(5);
 		switch(i) {
 		case 0:
 			return("Ronin");
-			//TODO : les autres
+		case 1:
+			return("Commercant");
+		case 2:
+			return("Samourai");
+		case 3:
+			return("Yakusa");
+		case 4:
+			return("Grand mère");
 		default:
 			return("Human");
 		}
 	}
 
+	public void ragoter() {
+		for (Humain humain : this.memoire) {
+			if(humain instanceof Traitre) {
+				this.parler("Je sais que "+humain.getNom()+" est un traitre !");
+			}else {
+				this.parler("je crois que "+humain.getNom()+" est "+humainHasard());
+			}
+		}
+	}
 }
