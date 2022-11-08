@@ -1,11 +1,11 @@
 package personnages;
 
-public class Humain {
+public abstract class Humain {
 	private String nom;
 	private String boisson;
 	private int argent;
 	
-	public Humain(String nom, int argent , String boisson) {
+	protected Humain(String nom, int argent , String boisson) {
 		this.nom = nom;
 		this.boisson = boisson;
 		this.argent = argent;
@@ -19,11 +19,11 @@ public class Humain {
 		return boisson;
 	}
 
-	public int getArgent() {
+	protected int getArgent() {
 		return argent;
 	}
 	
-	public void parler(String texte) {
+	protected void parler(String texte) {
 		System.out.println(this.nom + " - " + texte);
 	}
 	

@@ -36,6 +36,7 @@ public class Traitre extends Samourai {
 		}
 	}
 	
+	@Override
 	public void direBonjour() {
 		super.direBonjour();
 		this.parler("Mon niveau de traitrise est de "+ this.traitrise);

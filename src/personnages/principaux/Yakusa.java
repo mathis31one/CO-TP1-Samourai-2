@@ -18,6 +18,7 @@ public class Yakusa extends Humain {
 		this.parler("J’ai piqué le fric de " + commercant.getNom());
 	}
 	
+	@Override
 	public void direBonjour() {
 		super.direBonjour();
 		this.parler("Mon clan est celui de "+this.clan+".");

@@ -13,6 +13,7 @@ public class Ninja extends Yakusa {
 		this.clanSecret = clanNinja[new Random().nextInt(clanNinja.length)];
 	}
 
+	@Override
 	public void direBonjour() {
 		super.direBonjour();
 		this.parler("(mon clan secret est "+this.getClan()+this.clanSecret+" et maintenant que tu le sais, je vais devoir te tuer)");

@@ -6,7 +6,6 @@ public class Commercant extends Humain {
 
 	public Commercant(String nom, int argent) {
 		super(nom, argent, "thé");
-		// TODO Auto-generated constructor stub
 	}
 	
 	public int seFaireExtorquer() {
