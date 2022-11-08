@@ -6,8 +6,8 @@ public class Ronin extends Humain{
 
 	private int honneur;
 	
-	public Ronin(String nom, String boisson, int argent) {
-		super(nom, boisson, argent);
+	public Ronin(String nom, int argent, String boisson) {
+		super(nom, argent, boisson);
 		this.honneur = 1;
 	}
 	
@@ -20,7 +20,7 @@ public class Ronin extends Humain{
 		}
 	}
 	
-	public void provoquerYakusa(Yakusa y) {
+	public void provoquer(Yakusa y) {
 		if(this.honneur * 2 > y.getReputation()) {
 			this.gagnerArgent(y.perdreDuel());
 			this.honneur += 1;

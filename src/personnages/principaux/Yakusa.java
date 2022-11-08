@@ -6,8 +6,8 @@ public class Yakusa extends Humain {
 	private String clan;
 	private int reputation;
 
-	public Yakusa(String nom, String boisson, int argent, String clan) {
-		super(nom, boisson, argent);
+	public Yakusa(String nom, int argent, String boisson, String clan) {
+		super(nom, argent, boisson);
 		this.clan = clan;
 		this.reputation = 0;
 	}

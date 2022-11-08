@@ -3,8 +3,8 @@ package personnages.principaux;
 public class Samourai extends Ronin {
 
 	private String seigneur;
-	public Samourai(String nom, String boisson, int argent, String seigneur) {
-		super(nom, boisson, argent);
+	public Samourai(String nom, int argent,String boisson, String seigneur) {
+		super(nom, argent, boisson);
 		this.seigneur = seigneur;
 	}
 	

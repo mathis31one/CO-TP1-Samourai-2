@@ -4,8 +4,8 @@ import personnages.Humain;
 
 public class Commercant extends Humain {
 
-	public Commercant(String nom, String boisson, int argent) {
-		super(nom, boisson, argent);
+	public Commercant(String nom, int argent) {
+		super(nom, argent, "thé");
 		// TODO Auto-generated constructor stub
 	}
 	

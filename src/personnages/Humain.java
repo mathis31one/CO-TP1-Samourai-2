@@ -5,7 +5,7 @@ public class Humain {
 	private String boisson;
 	private int argent;
 	
-	public Humain(String nom, String boisson, int argent) {
+	public Humain(String nom, int argent , String boisson) {
 		this.nom = nom;
 		this.boisson = boisson;
 		this.argent = argent;
