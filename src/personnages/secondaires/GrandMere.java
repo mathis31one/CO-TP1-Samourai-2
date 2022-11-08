@@ -6,6 +6,7 @@ import java.util.Random;
 public class GrandMere extends Humain {
 	int nbConnaissances;
 	private Humain [] memoire; 
+	private Random r = new Random();
 	
 	public GrandMere(String nom, int argent) {
 		super(nom, argent, "tisane");
@@ -24,8 +25,7 @@ public class GrandMere extends Humain {
 	}
 	
 	private String humainHasard() {
-		Random r = new Random();
-		int i = r.nextInt(5);
+		int i = this.r.nextInt(5);
 		switch(i) {
 		case 0:
 			return("Ronin");
