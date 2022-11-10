@@ -1,10 +1,10 @@
 package histoires;
 
-import personnages.Humain;
 import personnages.principaux.Commercant;
 import personnages.principaux.Ronin;
 import personnages.principaux.Samourai;
 import personnages.principaux.Yakusa;
+import personnages.secondaires.GrandMere;
 
 public class MonHistoire {
 
@@ -21,5 +21,8 @@ public class MonHistoire {
 		  Samourai musaichi = new Samourai("Akimoto" ,  20, "the", "Miyamoto");
 		  musaichi.boire("eau");
 		  musaichi.direBonjour();
+		  GrandMere mamie = new GrandMere("Mamie",25);
+		  mamie.faireConnaissanceAvec(musaichi);
+		  mamie.ragoter();
 	}
 }

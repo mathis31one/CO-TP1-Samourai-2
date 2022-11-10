@@ -4,7 +4,7 @@ import personnages.Humain;
 import java.util.Random;
 
 public class GrandMere extends Humain {
-	int nbConnaissances;
+	private int nbConnaissances;
 	private Humain [] memoire; 
 	private Random r = new Random();
 	
@@ -36,18 +36,18 @@ public class GrandMere extends Humain {
 		case 3:
 			return("Yakusa");
 		case 4:
-			return("Grand mère");
+			return("Grand Mère");
 		default:
 			return("Human");
 		}
 	}
 
 	public void ragoter() {
-		for (Humain humain : this.memoire) {
-			if(humain instanceof Traitre) {
-				this.parler("Je sais que "+humain.getNom()+" est un traitre !");
+		for (int i = 0; i<this.nbConnaissances; i++) {
+			if(this.memoire[i] instanceof Traitre) {
+				this.parler("Je sais que "+this.memoire[i].getNom()+" est un traitre !");
 			}else {
-				this.parler("je crois que "+humain.getNom()+" est "+humainHasard());
+				this.parler("je crois que "+this.memoire[i].getNom()+" est "+humainHasard());
 			}
 		}
 	}

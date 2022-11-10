@@ -24,7 +24,7 @@ public abstract class Humain {
 	}
 	
 	protected void parler(String texte) {
-		System.out.println(this.nom + " - " + texte);
+		System.out.println("("+this.nom + ") - " + texte);
 	}
 	
 	public void direBonjour() {
